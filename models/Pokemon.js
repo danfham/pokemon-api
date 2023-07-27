@@ -7,6 +7,8 @@ const pokemonSchema = new mongoose.Schema({
     },
     pokemonImage: {
         type: String,
+        required: true,
+        default: 'no-image'
         
     },
     pokemonId: {
