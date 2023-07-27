@@ -27,6 +27,8 @@ async function processPokemon(url) {
     const response = await fetch(url)
     const data = await response.json()
 
+    if (!data.sprites.front_default) data.sprites.front_default = undefined
+
     return {
         name: data.name,
         pokemonId: data.id,
